@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.0.0
+* Material Dashboard 2 React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base box-shadow styles for the Material Kit 2 React.
+ * The base box-shadow styles for the Soft UI Dashboard PRO Material.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Material Kit 2 React using thie file.
+ * You can customized the box-shadow for the entire Soft UI Dashboard PRO Material using thie file.
  */
 
-// Material Kit 2 React Base Styles
+// Material Dashboard 2 PRO React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Material Kit 2 React Helper Functions
+// Material Dashboard 2 PRO React Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, tabs, coloredShadows } = colors;
@@ -99,14 +99,14 @@ export default {
       coloredShadows.dark,
       0.4
     )}`,
-    white: `${boxShadow([0, 4], [20, 0], white.main, 0.14)}, ${boxShadow(
-      [0, 7],
-      [10, -5],
-      white.main,
-      0.4
-    )}`,
   },
 
+  navbarBoxShadow: `${boxShadow([0, 0], [1, 1], white.main, 0.9, "inset")}, ${boxShadow(
+    [0, 20],
+    [27, 0],
+    black.main,
+    0.05
+  )}`,
   sliderBoxShadow: {
     thumb: boxShadow([0, 1], [13, 0], black.main, 0.2),
   },

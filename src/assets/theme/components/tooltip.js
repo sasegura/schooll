@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.0.0
+* Material Dashboard 2 React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -16,12 +16,12 @@ Coded by www.creative-tim.com
 // @mui material components
 import Fade from "@mui/material/Fade";
 
-// Material Kit 2 React base styles
+// Material Dashboard 2 PRO React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 import borders from "assets/theme/base/borders";
 
-// Material Kit 2 React helper functions
+// Material Dashboard 2 PRO React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { black, light } = colors;

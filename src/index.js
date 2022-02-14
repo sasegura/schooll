@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Kit 2 React - v2.0.0
+* Material Dashboard 2 React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Product Page: https://www.creative-tim.com/product/material-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,9 +18,14 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "App";
 
+// Soft UI Context Provider
+import { MaterialUIControllerProvider } from "context";
+
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <MaterialUIControllerProvider>
+      <App />
+    </MaterialUIControllerProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
