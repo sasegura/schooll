@@ -62,7 +62,7 @@ function LandingPage(props) {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <h1 className={classes.title}>{t(landingPage.slogan)}</h1>
-              <h4>{t(landingPage.owner)}</h4>
+              {/* <h4>{t(landingPage.owner)}</h4> */}
             </GridItem>
           </GridContainer>
         </div>
