@@ -1,606 +1,302 @@
 # Change Log
 
-## [2.0.0] 2021-12-08
-
+## [1.10.0] 2021-05-11
 ### Bug fixing
+- https://github.com/creativetimofficial/material-kit-react/issues/86
+  - This issue cannot be solved, it comes from the `react-swipeable-views` plugin, this plugins is no longer maintained, even `Material-UI` has dropped its usage and stopped animating the `Nav Pills`, so, we’ve dropped their usage as well
+- https://github.com/creativetimofficial/material-kit-react/issues/85
+  - Tested this inside a Linux environment, and evrything worked as expected, maybe the issue was solved by the new Material-UI version
+- https://github.com/creativetimofficial/material-kit-react/issues/75
+  - This issue will be closed, as people might want to change the brand component from `Button` to something else, for example a `Link` from `react-router-dom`
 
 ### Major style changes
-
-- Migration from Material-UI to MUI v5.
-- Migration from JSS to `styled` api, emotion and `sx` prop.
-- Product folders and files structured are updated: [README](https://github.com/creativetimofficial/material-dashboard-react/blob/main/README.md)
-- New components are added
-- New example blocks are added
-- Components are Example Blocks are now totally customizable and reusable
-- Product now uses the react context api for global configurations
-
 ### Deleted components
-
-- AdminNavbar.js
-- ChartBar.js
-- ChartLine.js
-- Footer.js
-- MapExample.js
-- PageVisitsCard.js
-- ProfileCard.js
-- SettingsForm.js
-- Sidebar.js
-- StatusCard.js
-- TableCard.js
-- TrafficCard.js
-
 ### Added components
-
-- MDAlert
-- MDAvatar
-- MDBadge
-- MDBox
-- MDButton
-- MDInput
-- MDPagination
-- MDProgress
-- MDSnackbar
-- MDTypography
-- Breadcrumbs
-- Cards
-  - BlogCards
-    - SimpleBlogCard
-  - InfoCards
-    - DefaultInfoCard
-    - ProfileInfoCard
-  - MasterCard
-  - ProjectCards
-    - DefaultProjectCard
-  - StatisticsCards
-    - ComplexStatisticsCard
-- Charts
-  - BarCharts
-    - HorizontalBarChart
-    - VerticalBarChart
-    - ReportsBarChart
-  - BubbleChart
-  - DoughnutCharts
-    - DefaultDoughnutChart
-  - LineCharts
-    - DefaultLineChart
-    - GradientLineChart
-    - ProgressLineChart
-    - ReportsLineChart
-  - MixedChart
-  - PieChart
-  - PolarChart
-  - RadarChart
-- Configurator
-- Footer
-- Items
-  - NotificationItem
-- LayoutContainers
-  - DashboardLayout
-  - PageLayout
-- Lists
-  - ProfilesList
-- Navbars
-  - DashboardNavbar
-  - DefaultNavbar
-- Sidenav
-- Tables
-  - DataTable
-- Timeline
-  - TimelineList
-  - TimelineItem
-
++ `@babel/core@7.14.0` (to stop warnings)
 ### Deleted dependencies
-
-```
-@material-ui/core
-@material-ui/icons
-chartist
-classnames
-match-sorter
-moment
-node-sass
-react-chartist
-```
-
+- `history` (no more need for this one, we'll use `BrowserRouter` instead of `Router` with `history`)
+- `react-swipeable-views` (no longer maintained)
 ### Added dependencies
-
-```
-@mui/material
-@mui/icons-material
-@mui/styled-engine
-@emotion/cache
-@emotion/react
-@emotion/styled
-@testing-library/jest-dom
-@testing-library/react":
-@testing-library/user-event
-chart.js
-chroma-js
-prop-types
-react-chartjs-2
-stylis
-stylis-plugin-rtl
-uuid
-web-vitals
-```
-
 ### Updated dependencies
-
-### Warning
-
-## [1.10.0] 2020-05-07
-
-### Bug fixing
-
-- https://github.com/creativetimofficial/material-dashboard-react/issues/145 (this was solved since we've changed react-google-maps with simple Google Maps API)
-- https://github.com/creativetimofficial/material-dashboard-react/issues/140 (this was solved since we've changed react-google-maps with simple Google Maps API)
-- https://github.com/creativetimofficial/material-dashboard-react/issues/138 (can be closed since it was help wanted)
-- https://github.com/creativetimofficial/material-dashboard-react/issues/137 (user did not respond)
-- https://github.com/creativetimofficial/material-dashboard-react/issues/133 (fixed it by using `useLocation` from `react-router-dom`)
-- https://github.com/creativetimofficial/material-dashboard-react/issues/16 (please check the following page: https://demos.creative-tim.com/material-dashboard-react/#/rtl/rtl-page)
-
-### Major style changes
-
-### Deleted components
-
-### Added components
-
-### Deleted dependencies
-
-- `react-google-maps` (we've replaced this with simple Google Maps API)
-- `@types/googlemaps` (we've replaced this with simple Google Maps API)
-- `@types/markerclustererplus` (we've replaced this with simple Google Maps API)
-- `ajv` (this was only installed to stop some install warnings)
-- `history` (we'll use `BrowserRouter` from `react-router-dom` package instead)
-
-### Added dependencies
-
-- `@babel/core@7.14.0` (to stop install warnings)
-
-### Updated dependencies
-
 ```
-@material-ui/core         4.10.0   →   4.11.4
-@material-ui/icons         4.9.1   →   4.11.2
-classnames                 2.2.6   →    2.3.1
-perfect-scrollbar          1.5.0   →    1.5.1
-react                    16.13.1   →   17.0.2
-react-chartist            0.14.3   →   0.14.4
-react-dom                16.13.1   →   17.0.2
-react-scripts              3.4.1   →    4.0.3
-eslint-config-prettier    6.11.0   →    8.3.0
-eslint-plugin-prettier     3.1.3   →    3.4.0
-gulp-append-prepend        1.0.8   →    1.0.9
-prettier                   2.0.5   →    2.2.1
-typescript                 3.9.3   →    4.2.4
+@material-ui/core                          4.10.0   →    4.11.4
+@material-ui/icons                          4.9.1   →    4.11.2
+classnames                                  2.2.6   →     2.3.1
+moment                                     2.26.0   →    2.29.1
+node-sass                                  4.14.1   →     6.0.0
+nouislider                                 14.5.0   →    15.1.0
+react                                     16.13.1   →    17.0.2
+react-datetime                             2.16.3   →     3.0.4
+react-dom                                 16.13.1   →    17.0.2
+react-scripts                               3.4.1   →     4.0.3
+react-slick                                0.26.1   →    0.28.1
+@babel/cli                                 7.10.1   →   7.13.16
+@babel/plugin-proposal-class-properties    7.10.1   →    7.13.0
+@babel/preset-env                          7.10.1   →    7.14.1
+@babel/preset-react                        7.10.1   →   7.13.13
+eslint-config-prettier                     6.11.0   →     8.3.0
+eslint-plugin-prettier                      3.1.3   →     3.4.0
+eslint-plugin-react                        7.20.0   →    7.23.2
+gulp-append-prepend                         1.0.8   →     1.0.9
+prettier                                    2.0.5   →     2.3.0
+typescript                                  3.9.3   →     4.2.4
 ```
-
 ### Warning
-
 _Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
-
 ```
-npm WARN react-swipeable-views@0.13.9 requires a peer of react@^15.3.0 || ^16.0.0 but none is installed. You must install peer dependencies yourself.
-npm WARN react-event-listener@0.6.6 requires a peer of react@^16.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN react-datetime@3.0.4 requires a peer of react@^16.5.0 but none is installed. You must install peer dependencies yourself.
 ```
+_You will also have the following message: found 80 vulnerabilities (1 low, 79 moderate). This comes from react-scripts, and will be fixed in the next version. NOTE: the product works as expected with these vulnerabilities._
 
-_You will also have the following message: `found 88 vulnerabilities (1 low, 87 moderate) in 2207 scanned packages`. This comes from react-scripts, and will be fixed in the next version. NOTE: the product works as expected with these `vulnerabilities`._
-
-## [1.9.0] 2020-05-27
-
+## [1.9.0] 2020-05-28
 ### Bug fixing
-
-- https://github.com/creativetimofficial/material-dashboard-react/issues/121
-- https://github.com/creativetimofficial/material-dashboard-react/issues/98
-- https://github.com/creativetimofficial/material-dashboard-react/pull/99
-- https://github.com/creativetimofficial/material-dashboard-react/pull/65
-
+- https://github.com/creativetimofficial/material-kit-react/issues/67
 ### Major style changes
-
 ### Deleted components
-
 ### Added components
-
 ### Deleted dependencies
-
 ### Added dependencies
-
 ### Updated dependencies
-
 ```
-@material-ui/core         4.3.2   →    4.10.0
-@material-ui/icons        4.2.1   →     4.9.1
-history                   4.9.0   →    4.10.1
-perfect-scrollbar         1.4.0   →     1.5.0
-react                    16.9.0   →   16.13.1
-react-chartist           0.13.3   →    0.14.3
-react-dom                16.9.0   →   16.13.1
-react-router-dom          5.0.1   →     5.2.0
-react-scripts             3.1.0   →     3.4.1
-react-swipeable-views    0.13.3   →    0.13.9
-eslint-config-prettier    6.0.0   →    6.11.0
-eslint-plugin-prettier    3.1.0   →     3.1.3
-prettier                 1.18.2   →     2.0.5
-@types/googlemaps        3.37.3   →    3.39.6
-ajv                      6.10.2   →    6.12.2
-typescript                3.5.3   →     3.9.3
+@material-ui/core                          4.3.2   →    4.10.0
+@material-ui/icons                         4.2.1   →     4.9.1
+history                                    4.9.0   →    4.10.1
+moment                                    2.24.0   →    2.26.0
+node-sass                                 4.12.0   →    4.14.1
+nouislider                                14.0.2   →    14.5.0
+react                                     16.9.0   →   16.13.1
+react-dom                                 16.9.0   →   16.13.1
+react-router-dom                           5.0.1   →     5.2.0
+react-scripts                              3.1.0   →     3.4.1
+react-slick                               0.25.2   →    0.26.1
+react-swipeable-views                     0.13.3   →    0.13.9
+@babel/cli                                 7.5.5   →    7.10.1
+@babel/plugin-proposal-class-properties    7.5.5   →    7.10.1
+@babel/preset-env                          7.5.5   →    7.10.1
+@babel/preset-react                        7.0.0   →    7.10.1
+eslint-config-prettier                     6.0.0   →    6.11.0
+eslint-plugin-prettier                     3.1.0   →     3.1.3
+eslint-plugin-react                       7.14.3   →    7.20.0
+prettier                                  1.18.2   →     2.0.5
+typescript                                 3.5.3   →     3.9.3
 ```
-
 ### Warning
-
 _While in development some of the plugins that were used for this product will throw some warnings - note, this only happens in development, the UI or the functionality of the product is not affected, also, if the issues will persist in React 17, we'll drop usage of those plugins, and replace them with other ones._
 _Warnings might appear while doing an npm install - they do not affect the UI or the functionality of the product, and they appear because of NodeJS and not from the product itself._
 
-## [1.8.0] 2019-08-26
-
+## [1.8.0] 2019.08.26
 ### Bug fixing
-
 - Rewrote the ISSUE_TEMPLATE
 - Deleted the copyright comments from all files, we only need to keep them inside our index.js and index.html
 - Added script that adds copyrights to the built app
 - Renamed all the files from `.jsx` to `.js`
 - Changed the `withStyles` function from Material-UI with the `makeStyles` function (integration with other frameworks should now be easy)
 - React Hooks is now supported
-
 ### Major style changes
-
-- Renamed `assets/jss/material-dashboard-react/layouts/dashboardStyle.js` to `assets/jss/material-dashboard-react/layouts/adminStyle.js`
-
+- `src/assets/scss/plugins/_plugin-nouislider.scss`
 ### Deleted components
-
 ### Added components
-
 ### Deleted dependencies
-
 ### Added dependencies
-
-- gulp@4.0.2
-- gulp-append-prepend@1.0.8
-
++ gulp@4.0.2
++ gulp-append-prepend@1.0.8
 ### Updated dependencies
-
 ```
-@material-ui/core         4.1.0   →    4.3.2
-@material-ui/icons        4.1.0   →    4.2.1
-react                    16.8.6   →   16.9.0
-react-dom                16.8.6   →   16.9.0
-react-scripts             3.0.1   →    3.1.0
-eslint-config-prettier    4.3.0   →    6.0.0
-@types/googlemaps        3.36.4   →   3.37.3
-ajv                      6.10.0   →   6.10.2
-typescript                3.5.1   →    3.5.3
+@material-ui/core                          4.1.0   →    4.3.2
+@material-ui/icons                         4.1.0   →    4.2.1
+nouislider                                13.1.5   →   14.0.2
+react                                     16.8.6   →   16.9.0
+react-dom                                 16.8.6   →   16.9.0
+react-scripts                              3.0.1   →    3.1.0
+react-slick                               0.24.0   →   0.25.2
+@babel/cli                                 7.4.4   →    7.5.5
+@babel/plugin-proposal-class-properties    7.4.4   →    7.5.5
+@babel/preset-env                          7.4.5   →    7.5.5
+eslint-config-prettier                     4.3.0   →    6.0.0
+eslint-plugin-react                       7.13.0   →   7.14.3
+typescript                                 3.5.1   →    3.5.3
 ```
 
 ## [1.7.0] 2019-06-19
-
 ### Warning
-
-**All React Material products have now the same version, i.e. 1.7.0.**
-
-- **All linting errors are solved now, but due to google analytics stuff, we've needed to add target="\_blank" to our links, so this lint error still exists.**
-
+**We've skipped versions 1.5.0, 1.6.0 so that all React Material products would be on the same version.**
 ### Bug fixing
-
 - Bugs from updated dependencies
 - Removed `.env` file, and replaced it with the `jsconfig.json` file
-- Changes caused by running [the prettier command](https://prettier.io/docs/en/install.html) for _.jsx_, _.js_, _.html_ and _.css_ files
+- Changes caused by running [the prettier command](https://prettier.io/docs/en/install.html) for *.jsx*, *.js*, *.html* and *.css* files
 - Changed all string refs to `React.createRef()`
 - Added types validation in each component
 - Solved linting issues
-- Solved https://github.com/creativetimofficial/material-dashboard-react/issues/83
-
+- Solved https://github.com/creativetimofficial/material-kit-react/issues/52
+- Solved https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/149
 ### Major style changes
-
 ### Deleted components
-
 ### Added components
-
 ### Deleted dependencies
-
 ### Added dependencies
-
+- eslint-plugin-react@7.13.0
+- prettier@1.18.2 (To stop console warnings on install)
 - typescript@3.5.1 (To stop console warnings on install)
-
 ### Updated dependencies
-
 ```
-@material-ui/core          3.9.2   →    4.1.0
-@material-ui/icons         3.0.2   →    4.1.0
-chartist                  0.10.1   →   0.11.2
-history                    4.7.2   →    4.9.0
-prettier                  1.16.4   →   1.18.2
-prop-types                15.7.1   →   15.7.2
-react                     16.8.1   →   16.8.6
-react-dom                 16.8.1   →   16.8.6
-react-router-dom           4.3.1   →    5.0.1
-react-scripts              2.1.5   →    3.0.1
-react-swipeable-views     0.13.1   →   0.13.3
-eslint-config-prettier     4.0.0   →    4.3.0
-eslint-plugin-prettier     3.0.1   →    3.1.0
-@types/googlemaps        3.30.16   →   3.36.4
-ajv                        6.9.1   →   6.10.0
+@material-ui/core                          3.9.2   →    4.1.0
+@material-ui/icons                         3.0.2   →    4.1.0
+history                                    4.7.2   →    4.9.0
+node-sass                                 4.11.0   →   4.12.0
+nouislider                                13.1.0   →   13.1.5
+prop-types                                15.7.1   →   15.7.2
+react                                     16.8.1   →   16.8.6
+react-dom                                 16.8.1   →   16.8.6
+react-router-dom                           4.3.1   →    5.0.1
+react-scripts                              2.1.5   →    3.0.1
+react-slick                               0.23.2   →   0.24.0
+react-swipeable-views                     0.13.1   →   0.13.3
+@babel/cli                                 7.2.3   →    7.4.4
+@babel/plugin-proposal-class-properties    7.3.0   →    7.4.4
+@babel/preset-env                          7.3.1   →    7.4.5
+eslint-config-prettier                     4.0.0   →    4.3.0
+eslint-plugin-prettier                     3.0.1   →    3.1.0
 ```
 
-## [1.6.0] 2019-02-13
-
-### Nice stuff
-
-- [Added RTL support](https://github.com/creativetimofficial/material-dashboard-react/issues/16)
-
-### Bug Fixing
-
-- [Added new script for npm](https://github.com/creativetimofficial/material-dashboard-react/issues/69)
-- Changed our buggy routing system, now it should work flawlessly, for more info, please refer to our [live docs here](https://demos.creative-tim.com/material-dashboard-react/#/documentation/routing-system)
-- [https://github.com/creativetimofficial/material-dashboard-react/issues/67](https://github.com/creativetimofficial/material-dashboard-react/issues/67)
-- [https://github.com/creativetimofficial/material-dashboard-react/issues/68](https://github.com/creativetimofficial/material-dashboard-react/issues/68)
-- [https://github.com/creativetimofficial/material-dashboard-react/issues/66](https://github.com/creativetimofficial/material-dashboard-react/issues/66)
-
+## [1.4.0] 2019-02-13
+### Bug fixing
+- https://github.com/creativetimofficial/material-kit-react/issues/46
+- https://github.com/creativetimofficial/material-kit-react/issues/44
+- Updated available scripts
+- Changed the *.babelrc* file
 ### Major style changes
-
-- Almost all styles have been changed due to new components, solved issues or [the prettier command](https://prettier.io/docs/en/install.html)
-
+- **src/assets/jss/material-kit-react/components/headerStyle.jsx**
+- **src/assets/jss/material-kit-react/components/customDropdownStyle.jsx**
 ### Major components changes
-
-- Changes caused by running [the prettier command](https://prettier.io/docs/en/install.html) for _.jsx_, _.js_, _.html_ and _.css_ files
-- **src/index.js**
-- **src/components/CustomTabs/CustomTabs.jsx**
-- **src/components/Header/Header.jsx**
-- **src/components/Sidebar/Sidebar.jsx**
-- **src/components/Snackbar/Snackbar.jsx**
-- **src/components/Snackbar/SnackbarContent.jsx**
-- **src/components/Tasks/Tasks.jsx**
-- **src/views/Notifications/Notifications.jsx**
-
-### New components
-
-- **src/components/FixedPlugin/FixedPlugin.jsx**(Left menu used by us for customization - due to this, we've had to add a link for the fonts awesome cdn)
-- **src/components/Header/RTLHeaderLinks.jsx**
-- **src/layouts/Admin.jsx** (instead of Dashboard)
-- **src/layouts/RTL.jsx**
-- **src/views/RTLPage/RTLPage.jsx**
-
-### Deleted components
-
-- **src/layouts/Dashboard/Dashboard.jsx** (renamed to Admin)
-- **src/routes/dashboard.jsx**
-- **src/routes/index.jsx**
-
+- - Changes caused by running [the prettier command](https://prettier.io/docs/en/install.html) for *.jsx*, *.js*, *.html* and *.css* files
+- **src/components/CustomDropdown/CustomDropdown.jsx**
 ### Deleted dependencies
-
-- `babel-plugin-module-resolver` (because of the upgrade of `react-scripts`)
-- `babel-eslint` (because of the upgrade of `react-scripts`)
-- `eslint` (because of the upgrade of `react-scripts`)
-- `eslint-plugin-react` (because of the upgrade of `react-scripts`)
+- `babel-eslint`
+- `eslint`
+- `eslint-plugin-react`
+- `prettier`
 - `npm-run-all`
-
+- `babel-cli`
+- `babel-plugin-module-resolver`
+- `babel-plugin-import-rename`
+- `babel-plugin-transform-object-rest-spread`
+- `babel-plugin-transform-react-jsx`
+- `babel-preset-es2015`
+- `node-sass-chokidar`
 ### Added dependencies
-
-- `history4.7.2`
-- `prop-types@15.6.2`
-- `prettier@1.16.4`
-
+- `@babel/cli` version: **7.2.3**
+- `@babel/plugin-proposal-class-properties` version: **7.3.0**
+- `@babel/preset-env` version: **7.3.1**
+- `@babel/preset-react` version: **7.0.0**
+- `node-sass` version: **4.11.0**
 ### Updated dependencies
+-  `@material-ui/core`               *3.1.1*   →    **3.9.2**
+-  `@material-ui/icons`              *3.0.1*   →    **3.0.2**
+-  `moment`                         *2.22.2*   →   **2.24.0**
+-  `node-sass-chokidar`              *1.3.3*   →    **1.3.4**
+-  `nouislider`                     *12.0.0*   →   **13.1.0**
+-  `npm-run-all`                     *4.1.3*   →    **4.1.5**
+-  `prop-types`                     *15.6.2*   →   **15.7.1**
+-  `react`                          *16.5.2*   →   **16.8.1**
+-  `react-datetime`                 *2.15.0*   →   **2.16.3**
+-  `react-dom`                      *16.5.2*   →   **16.8.1**
+-  `react-scripts`                   *1.1.4*   →    **2.1.5**
+-  `react-slick`                    *0.23.1*   →   **0.23.2**
+-  `react-swipeable-views`          *0.13.0*   →   **0.13.1**
+-  `babel-plugin-module-resolver`    *3.1.1*   →    **3.1.3**
+-  `eslint-config-prettier`          *3.1.0*   →    **4.0.0**
+-  `eslint-plugin-prettier`          *2.6.2*   →    **3.0.1**
 
-- `@material-ui/core` _3.1.0_ → **3.9.2**
-- `@material-ui/icons` _3.0.1_ → **3.0.2**
-- `@types/googlemaps` _3.30.13_ → **3.30.16**
-- `ajv` _^5.0.0_ → **6.9.1**
-- `prop-types` _15.6.2_ → **15.7.1**
-- `react` _16.5.2_ → **16.8.1**
-- `react-chartist` _0.13.1_ → **0.13.3**
-- `react-dom` _16.5.2_ → **16.8.1**
-- `react-scripts` _1.1.5_ → **2.1.5**
-- `react-swipeable-views` _0.12.17_ → **0.13.1**
-- `eslint-config-prettier` _3.0.1_ → **4.0.0**
-- `eslint-plugin-prettier` _2.6.2_ → **3.0.1**
-
-## [1.5.0] 2018-09-21
-
-### Nice stuff
-
-- Added `install:clean` command (deletes `node_modules` and `package-lock.json` and runs `npm install`)
-
-### Major style changes
-
-- `src/assets/jss/material-dashboard-react/components/tasksStyle.jsx`
-- `src/assets/jss/material-dashboard-react/checkboxAdnRadioStyle.jsx`
-- `src/assets/jss/material-dashboard-react/components/customTabsStyle.jsx`
-- `src/assets/jss/material-dashboard-react/components/snackbarContentStyle.jsx`
-
+## [1.3.0] 2018-08-16
+### Bug fixing
+- Github own repo
+  - [https://github.com/creativetimofficial/material-kit-react/issues/36](https://github.com/creativetimofficial/material-kit-react/issues/36)
+- Github othe repos
+  - [https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/79](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/79)
+### Major styling changes
+- `src/assets/jss/material-kit-react/components/headerStyle.jsx`
+- `src/assets/jss/material-kit-react/components/snackbarContentStyle.jsx`
+- `src/assets/jss/material-kit-react/views/loginPage.jsx`
+- `src/assets/jss/material-kit-react/customCheckboxRadioSwitch.jsx`
+- `src/assets/scss/plugins/_plugin-nouislider.scss`
 ### Deleted dependencies
-
-- `@babel/runtime v7.0.0-beta.55`
-
+- `react-nouislider`
 ### Added dependencies
-
+- `nouislider`                `12.0.0`
 ### Updated dependencies
+- `@material-ui/core`          `1.5.0`   →    `3.1.1`
+- `@material-ui/icons`         `2.0.2`   →    `3.0.1`
+- `react`                     `16.4.2`   →   `16.5.2`
+- `react-dom`                 `16.4.2`   →   `16.5.2`
+- `react-scripts`              `1.1.4`   →    `1.1.5`
+- `react-swipeable-views`    `0.12.16`   →   `0.13.0`
+- `eslint-config-prettier`     `2.9.0`   →    `3.1.0`
+- `eslint-plugin-react`       `7.10.0`   →   `7.11.1`
+- `prettier`                  `1.13.7`   →   `1.14.3`
 
-- `@material-ui/core` _1.4.3_ → **3.1.0**
-- `@material-ui/icons` _2.0.1_ → **3.0.1**
-- `@types/googlemaps` _3.30.11_ → **3.30.13**
-- `ajv` _6.5.2_ → **5.0.0** (to stop some warnings)
-- `react` _16.4.1_ → **16.5.2**
-- `react-dom` _16.4.1_ → **16.5.2**
-- `react-scripts` _1.1.4_ → **1.1.5**
-- `react-swipeable-views` _0.12.15_ → **0.12.17**
-- `eslint-config-prettier` _^2.9.0_ → **3.0.1**
-- `eslint-plugin-react` _^7.10.0_ → **7.11.1**
-- `prettier` _^1.13.7_ → **1.14.3**
 
-## [1.4.1] 2018-08-10
-
-### Bug Fixing
-
-- Github solved issues:
-  - `https://github.com/creativetimofficial/material-dashboard-react/issues/58`
-- Changed the `GridContainer` component
-
-### Major style changes
-
-- `src/assets/jss/material-dashboard-react/components/footerStyle.jsx`
-- `src/assets/jss/material-dashboard-react/components/headerStyle.jsx`
-
-### Added dependencies
-
-- `@babel/runtime v7.0.0-beta.55`
-
-### Update dependencies
-
-- `@material-ui/core v1.4.1` to `@material-ui/core v1.4.3`
-- `@material-ui/icons v2.0.0` to `@material-ui/icons v2.0.1`
-
-## [1.4.0] 2018-07-26
-
-### Bug Fixing
-
-- Added resize event listener for window ([see this issue here](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues/40#issuecomment-406983150))
-- Added issues template file
-- Github solved issues:
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/49 (dropped `react-popper` in favour of `@material-ui/core/Popper`)
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/47
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/45
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/38
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/37
-- Github enhancement issues:
-  - https://github.com/creativetimofficial/material-dashboard-react/issues/47 (read the [./README.md](./README.md) file)
-
-### Major style changes
-
+## [1.2.0] 2018-08-16
+### Bug fixing
+- Added new script command for clean install of node_modules (just run in terminal `npm run install:clean`, this will also start your server)
+- Added lint commands
+- Minor changes in components due to the upgrade of `@material-ui/icons`
+- Github
+  - [https://github.com/creativetimofficial/material-kit-react/issues/16](https://github.com/creativetimofficial/material-kit-react/issues/16)
+  - [https://github.com/creativetimofficial/material-kit-react/issues/25](https://github.com/creativetimofficial/material-kit-react/issues/25)
+  - [https://github.com/creativetimofficial/material-kit-react/issues/26](https://github.com/creativetimofficial/material-kit-react/issues/26)
+  - [https://github.com/creativetimofficial/material-kit-react/issues/28](https://github.com/creativetimofficial/material-kit-react/issues/28)
+### Major styling changes
 - Added styles for `svg`'s, **font-awesome** classes and `.material-icons` class inside
-  - `src/assets/jss/material-dashboard-react/views/dashboardStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/components/buttonStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/components/cardFooterStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/components/cardHeaderStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/components/headerLinksStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/components/customTabsStyle.jsx`
-- Others
-  - `src/assets/jss/material-dashboard-react/tooltipStyle.jsx`
-  - `src/assets/jss/material-dashboard-react/dropdownStyle.jsx`
-
+  - `src/assets/jss/material-kit-react/components/buttonStyle.jsx`
+  - `src/assets/jss/material-kit-react/components/customInputStyle.jsx`
+  - `src/assets/jss/material-kit-react/components/customDropdownStyle.jsx`
+  - `src/assets/jss/material-kit-react/components/headerLinksStyle.jsx`
+  - `src/assets/jss/material-kit-react/components/headerStyle.jsx`
+  - `src/assets/jss/material-kit-react/views/loginPage.jsx`
 ### Dropped components
-
-- Dropped popper usage in favour of `@material-ui/core/Popper` (Changes in `src/components/Header/HeaderLinks.jsx`)
-
-### Added components
-
-- `src/components/Grid/GridContainer.jsx` (instead of MUI's `<Grid container...` component)
-
+- No more use of `react-popper`, no it's beeing used `@material-ui/core/Popper` instead (see `CustomDropdown`)
 ### Deleted dependencies
-
 ### Added dependencies
+- `prop-types v15.6.2`
+- `classnames v2.2.6`
+### Updated dependencies
+- `@material-ui/core v1.2.1` to `@material-ui/core v1.5.0`
+- `@material-ui/icons v1.1.0` to `@material-ui/icons v2.0.2`
+- `ajv v6.0.0` to `ajv v6.5.2`
+- `node-sass-chokidar v1.3.0` to `node-sass-chokidar v1.3.3`
+- `react v16.4.0` to `react v16.4.2`
+- `react-datetime v2.14.0` to `react-datetime v2.15.0`
+- `react-dom v16.4.0` to `react-dom v16.4.2`
+- `react-swipeable-views v0.12.13` to `react-swipeable-views v0.12.16`
 
-### Update dependencies
 
-- `@material-ui/core v1.2.1` to `@material-ui/core v1.4.1`
-- `@material-ui/icons v1.1.0` to `@material-ui/icons v2.0.0`
-- `@types/googlemaps v3.30.9` to `@types/googlemaps v3.30.11`
-- `ajv v6.5.1` to `ajv v6.5.2`
-- `react v16.4.0` to `react v16.4.1`
-- `react-dom v16.4.0` to `react-dom v16.4.1`
-- `react-swipeable-views v0.12.13` to `react-swipeable-views v0.12.15`
-
-## [1.3.0] 2018-06-15
-
-### Bug Fixing
-
-- Changed import from `material-ui` to `@material-ui/core`
-- Droped `src/components/index.js`, and changed all the imports to separate ones
-- Renamed `ItemGrid` to `GridItem`
-
-### Major style changes
-
-- Moved the styles of `src/components/` inside `src/assets/jss/material-dashboard-react/components/`
-- Moved the styles of `src/layouts/` inside `src/assets/jss/material-dashboard-react/layouts/`
-- Moved the styles of `src/views/` inside `src/assets/jss/material-dashboard-react/views/`
-- Almost all styles have been changed more or less
-
+## [1.1.0] 2018-06-13
+### Major styling changes
+- `src/assets/jss/material-kit-react/components/buttonStyle.jsx`, due to the fact that we've droped `src/components/CustomButtons/IconButton.jsx`
+- `src/assets/jss/material-kit-react/components/customInputStyle.jsx`
+- `src/assets/jss/material-kit-react/components/customTabsStyle.jsx`
+- `src/assets/jss/material-kit-react/components/headerLinksStyle.jsx`
 ### Dropped components
-
-- `src/components/CustomButtons/IconButton.jsx` (instead use `src/components/CustomButtons/Button.jsx` with `justIcon` prop)
-- Some components from `src/components/Typography` (instead of these we've added some css to style the normal HTML tags)
-  - `src/components/Typography/A.jsx`
-  - `src/components/Typography/P.jsx`
-  - `src/components/Typography/Small.jsx`
-- All the cards from `src/components/Cards`
-  - `src/components/Cards/ChartCard.jsx`
-  - `src/components/Cards/ProfileCard.jsx`
-  - `src/components/Cards/RegularCard.jsx`
-  - `src/components/Cards/StatsCard.jsx`
-  - `src/components/Cards/TasksCard.jsx`
-
-### Added components
-
-- New card components (`src/components/Card/*`) instead of `src/components/Cards/*`
-  - `src/components/Card/Card.jsx`
-  - `src/components/Card/CardAvatar.jsx`
-  - `src/components/Card/CardBody.jsx`
-  - `src/components/Card/CardFooter.jsx`
-  - `src/components/Card/CardHeader.jsx`
-  - `src/components/Card/CardIcon.jsx`
-- `src/components/CustomTabs/CustomTabs.jsx` (instead of `src/components/Cards/TasksCard.jsx`)
-
+- `src/components/CustomButtons/IconButton.jsx` instead use `src/components/CustomButtons/Button.jsx` (with the prop `justIcon` on them)
 ### Deleted dependencies
-
-- `material-ui@1.0.0-beta.41`
-
+- `material-ui@1.0.0-beta.45`
 ### Added dependencies
-
-- `@material-ui/core@1.2.1` (instead of `material-ui@1.0.0-beta.41`)
-- `@types/googlemaps@3.30.9` to stop the warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/googlemaps@^3.0.0 but none is installed. You must install peer dependencies yourself.**
-- `@types/markerclustererplus@2.1.33` to stop the warning: **npm WARN react-google-maps@9.4.5 requires a peer of @types/markerclustererplus@^2.1.29 but none is installed. You must install peer dependencies yourself.**
-- `ajv@6.5.1` to stop the warning: **npm WARN ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0 but none is installed. You must install peer dependencies yourself.**
-
-### Update dependencies
-
-- `@material-ui/icons@1.0.0-beta.42` to `@material-ui/icons@1.1.0`
-- `classnames@2.2.5` to `classnames@2.2.6`
+- `material-ui/core@1.2.1` (instead of `material-ui@1.0.0-beta.45`)
+- `ajv@6.0.0` (to stop the warning: **npm WARN ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0 but none is installed. You must install peer dependencies yourself.**)
+### Updated dependencies
+- `@material-ui/icons@1.0.0-beta.43` to `@material-ui/icons@1.1.0`
+- `moment@2.22.1` to `moment@2.22.2`
+- `node-sass-chokidar@1.2.2` to `node-sass-chokidar@1.3.0`
 - `npm-run-all@4.1.2` to `npm-run-all@4.1.3`
-- `perfect-scrollbar@1.3.0` to `perfect-scrollbar@1.4.0`
-- `react@16.2.0` to `react@16.4.0`
-- `react-dom@16.2.0` to `react-dom@16.4.0`
+- `react@16.3.1` to `react@16.4.0`
+- `react-dom@16.3.1` to `react-dom@16.4.0`
 - `react-router-dom@4.2.2` to `react-router-dom@4.3.1`
-- `react-scripts@1.0.17` to `react-scripts@1.1.4`
-- `react-swipeable-views@0.12.12` to `react-swipeable-views@0.12.13`
+### Bug fixing
+- Added `maxHeight` in styling sheets for those components that had `height`  set in `vh` (these changes were made because on an iframe the product would scroll forever)
+- Changed the imports from Material-UI (now they are with `@material-ui/core` instead of `material-ui`)
+- Dropped some styling on some pages/section of pages due to the change of the buttons styling
 
-## [1.2.0] 2018-04-16
-
-### Bug Fixing
-
-- Renamed `src/containers/App/App.jsx` to `src/layouts/Dashboard/Dashboard.jsx`
-- Renamed `src/variables/styles.jsx` to `src/assets/jss/material-dashboard-react.jsx`
-- Moved all the files from `src/variables/styles/` to `src/assets/jss/material-dashboard-react/`
-- Changes caused by the upgrade of `material-ui`
-- Small bug fixing
-
-### Deleted dependencies
-
-- `material-ui-icons@1.0.0-beta.17`
-
-### Update dependencies
-
-- `material-ui@1.0.0-beta.34` to `material-ui@1.0.0-beta.41`
-
-### Added dependencies
-
-- `@material-ui/icons@1.0.0-beta.42`
-
-## [1.1.0] 2018-02-23
-
-### Bug Fixing
-
-- PerfectScrollbar renders only on windows
-- Used [pretier](https://github.com/prettier/prettier) to make the code more readable
-- Optimized images sizes
-- Changed `classes={root:...}` to `classNames={...}` only where it had `classes={root:...}` and not like `classes={root:..., something:... ,...}`
-- Added `classnames()` to avoid doing brittle class name manipulation
-- Classes that do not need states were converted to functions
-- Moved the style variables in `src/variables/styles.jsx` and all the components styles in `src/variables/styles/{$componentNameStyle}.jsx` files
-- Added `-webkit-overflow-scrolling: touch` css for nice scrolling on mobile devices
-- Updated to latest `Material-UI` version (from `v1.0.0.beta30` to `v1.0.0.beta34`)
-
-## [1.0.0] 2018-01-29
-
+## [1.0.0] 2018-05-08
 ### Original Release
-
 - Added Material-UI as base framework
 - Added design from Material Dashboard by Creative Tim
