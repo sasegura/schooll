@@ -49,7 +49,8 @@
     "prettier": "2.4.1"
   },
   "optionalDependencies": {
-    "typescript": "3.9.5"
+    "typescript": "3.9.5",
+    "fsevents": "2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
