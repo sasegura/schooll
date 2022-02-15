@@ -1,7 +1,7 @@
 {
-  "name": "material-kit-react",
+  "name": "computer_crack_school",
   "version": "1.10.0",
-  "description": "Material Kit React. Coded by Creative Tim",
+  "description": "Computer crack school",
   "private": true,
   "main": "src/index.js",
   "dependencies": {
@@ -10,7 +10,6 @@
     "@material-ui/core": "4.12.3",
     "@material-ui/icons": "4.11.2",
     "classnames": "2.3.1",
-    "firebase": "^7.17.1",
     "i18next": "21.2.3",
     "i18next-browser-languagedetector": "6.1.2",
     "i18next-http-backend": "1.3.1",
@@ -23,7 +22,6 @@
     "react-cookie-consent": "^6.4.1",
     "react-datetime": "3.1.1",
     "react-dom": "17.0.2",
-    "react-firebase-hooks": "^3.0.4",
     "react-helmet": "6.1.0",
     "react-i18next": "11.12.0",
     "react-paypal-express-checkout": "^1.0.5",
