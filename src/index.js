@@ -33,6 +33,7 @@ ReactDOM.render(
         <Route path="/components" component={Components} />
         <Route path="/about-us" component={AboutUs} />
         <Route path="/terms-and-conditions" component={TermsAndConditions} />
+        
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>
