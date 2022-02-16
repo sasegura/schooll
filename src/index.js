@@ -13,18 +13,13 @@ import AboutUs from "views/AboutUs/AboutUs";
 import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
 import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
 import FAC from "views/FAC/FAC";
-import { Auth0Provider } from "@auth0/auth0-react";
 import Cookies from "components/Cookies";
 import "./translations/i18n";
 
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Auth0Provider
-    domain={process.env.REACT_APP_AUTH0_DOMINE}
-    clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
-    redirectUri={window.location.origin}
-  >
+  <>
     <Router history={hist}>
       <Switch>
         <Route path="/profile-page" component={ProfilePage} />
@@ -32,12 +27,10 @@ ReactDOM.render(
         <Route path="/login-page" component={LoginPage} />
         <Route path="/components" component={Components} />
         <Route path="/about-us" component={AboutUs} />
-        <Route path="/terms-and-conditions" component={TermsAndConditions} />
-        
+        <Route path="/terms-and-conditions" component={TermsAndConditions} />        
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>
-    <Cookies />
-  </Auth0Provider>,
+    <Cookies /></>,
   document.getElementById("root")
 );
