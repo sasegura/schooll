@@ -1,36 +1,26 @@
+/**
+=========================================================
+* Material Kit 2 React - v2.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
 import React from "react";
 import ReactDOM from "react-dom";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
-
-import "assets/scss/material-kit-react.scss?v=1.10.0";
-
-// pages for this product
-import Components from "views/Components/Components.js";
-import LandingPage from "views/LandingPage/LandingPage.js";
-import LoginPage from "views/LoginPage/LoginPage.js";
-import AboutUs from "views/AboutUs/AboutUs";
-import TermsAndConditions from "views/TermsAndConditions/TermsAndConditions";
-import ProfilePage from "views/AuthenticationRequiered/ProfilePage/ProfilePage";
-import FAC from "views/FAC/FAC";
-import Cookies from "components/Cookies";
-import "./translations/i18n";
-
-var hist = createBrowserHistory();
+import { BrowserRouter } from "react-router-dom";
+import App from "App";
 
 ReactDOM.render(
-  <>
-    <Router history={hist}>
-      <Switch>
-        <Route path="/profile-page" component={ProfilePage} />
-        <Route path="/FAC" component={FAC} />
-        <Route path="/login-page" component={LoginPage} />
-        <Route path="/components" component={Components} />
-        <Route path="/about-us" component={AboutUs} />
-        <Route path="/terms-and-conditions" component={TermsAndConditions} />        
-        <Route path="/" component={LandingPage} />
-      </Switch>
-    </Router>
-    <Cookies /></>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById("root")
 );
