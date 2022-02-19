@@ -10,7 +10,7 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/prod
 
 const useStyles = makeStyles(styles);
 
-import { facSection } from "assets/text";
+import facSection from "assets/text";
 import { withTranslation } from "react-i18next";
 import { PropTypes } from "prop-types";
 

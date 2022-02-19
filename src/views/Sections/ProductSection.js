@@ -12,7 +12,9 @@ const useStyles = makeStyles(styles);
 
 import PropTypes from "prop-types";
 
-import { presentations, siteTitle } from "assets/text";
+import presentations from "assets/text";
+import siteTitle from "assets/text";
+
 import { withTranslation } from "react-i18next";
 import YouTube from "react-youtube";
 

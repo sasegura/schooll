@@ -18,7 +18,7 @@ import { HeaderBrand } from "../../../components/Header/HeaderBrand";
 import ForumSection from "views/Sections/ForumSection";
 import { withAuthenticationRequired } from "@auth0/auth0-react";
 import { Helmet } from "react-helmet";
-import { forumPage } from "assets/text";
+import forumPage from "assets/text";
 
 const useStyles = makeStyles(styles);
 

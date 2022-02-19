@@ -16,7 +16,7 @@ import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 import TeamSection from "views/Sections/TeamSection";
 import { Helmet } from "react-helmet";
-import { aboutUs } from "assets/text";
+import aboutUs  from "assets/text";
 
 const useStyles = makeStyles(styles);
 

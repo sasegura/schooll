@@ -22,7 +22,7 @@ import TeamSection from "../Sections/TeamSection.js";
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
-import { landingPage } from "assets/text";
+import landingPage from "assets/text";
 import { withTranslation } from "react-i18next";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 import MessageSection from "views/Sections/MessageSection.js";

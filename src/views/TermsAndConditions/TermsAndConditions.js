@@ -13,7 +13,7 @@ import { withTranslation } from "react-i18next";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
-import { termsAndConditions } from "assets/text";
+import termsAndConditions from "assets/text";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import { Helmet } from "react-helmet";

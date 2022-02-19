@@ -37,7 +37,7 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import { Loading } from "mdi-material-ui";
 import PayPal from "components/PayPal/Paypal";
 import { Helmet } from "react-helmet";
-import { profilePage } from "assets/text";
+import profilePage from "assets/text";
 import PropTypes from "prop-types";
 
 const useStyles = makeStyles(styles);

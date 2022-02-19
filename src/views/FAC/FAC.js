@@ -15,7 +15,7 @@ import styles from "assets/jss/material-kit-react/views/profilePage.js";
 import { HeaderBrand } from "../../components/Header/HeaderBrand";
 
 import FacSection from "views/Sections/FacSection";
-import { facSection } from "assets/text";
+import facSection from "assets/text";
 import { Helmet } from "react-helmet";
 const useStyles = makeStyles(styles);
 

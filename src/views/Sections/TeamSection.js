@@ -15,7 +15,9 @@ import CardBody from "components/Card/CardBody.js";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
 import albert from "assets/img/albert.jpg";
-import { teamSection, owner } from "assets/text";
+import teamSection from "assets/text";
+import owner from "assets/text";
+
 import { withTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 
