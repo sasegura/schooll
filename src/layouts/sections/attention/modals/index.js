@@ -17,26 +17,26 @@ Coded by www.creative-tim.com
 import BaseLayout from "layouts/sections/components/BaseLayout";
 import View from "layouts/sections/components/View";
 
-// ALerts page components
-import SimpleAlerts from "layouts/sections/attention-catchers/alerts/components/SimpleAlerts";
+// Modals page components
+import SimpleModal from "layouts/sections/attention/modals/components/SimpleModal";
 
-// ALerts page components code
-import simpleAlertsCode from "layouts/sections/attention-catchers/alerts/components/SimpleAlerts/code";
+// Modals page components code
+import simpleModalCode from "layouts/sections/attention/modals/components/SimpleModal/code";
 
-function Alerts() {
+function Modals() {
   return (
     <BaseLayout
-      title="Alerts"
+      title="Modals"
       breadcrumb={[
-        { label: "Page Sections", route: "/sections/attention-catchers/alerts" },
-        { label: "Alerts" },
+        { label: "Page Sections", route: "/sections/attention/modals" },
+        { label: "Modals" },
       ]}
     >
-      <View title="Simple alerts" code={simpleAlertsCode}>
-        <SimpleAlerts />
+      <View title="Simple modal" code={simpleModalCode}>
+        <SimpleModal />
       </View>
     </BaseLayout>
   );
 }
 
-export default Alerts;
+export default Modals;

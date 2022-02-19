@@ -56,9 +56,9 @@ import NavTabs from "layouts/sections/navigation/nav-tabs";
 import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
-import Alerts from "layouts/sections/attention-catchers/alerts";
-import Modals from "layouts/sections/attention-catchers/modals";
-import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
+import Alerts from "layouts/sections/attention/alerts";
+import Modals from "layouts/sections/attention/modals";
+import TooltipsPopovers from "layouts/sections/attention/tooltips";
 import Avatars from "layouts/sections/elements/avatars";
 import Badges from "layouts/sections/elements/badges";
 import BreadcrumbsEl from "layouts/sections/elements/breadcrumbs";
@@ -174,17 +174,17 @@ const routes = [
         collapse: [
           {
             name: "alerts",
-            route: "/sections/attention-catchers/alerts",
+            route: "/sections/attention/alerts",
             component: <Alerts />,
           },
           {
             name: "modals",
-            route: "/sections/attention-catchers/modals",
+            route: "/sections/attention/modals",
             component: <Modals />,
           },
           {
             name: "tooltips & popovers",
-            route: "/sections/attention-catchers/tooltips-popovers",
+            route: "/sections/attention/tooltips",
             component: <TooltipsPopovers />,
           },
         ],
