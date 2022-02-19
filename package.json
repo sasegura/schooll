@@ -6,17 +6,6 @@
   "license": "See license in https://www.creative-tim.com/license",
   "description": "React version of Material Kit 2 by Creative Tim",
   "homepage": "https://demos.creative-tim.com/material-kit-react/#/",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
-  },
-  "engines": {
-    "node": "14 || 15 || 16",
-    "npm": ">=6"
-  },
   "dependencies": {
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
@@ -66,13 +55,20 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/preset-env": "7.15.6",
+    "@babel/preset-react": "7.14.5",
+    "eslint": "7.32.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-import": "2.24.2",
     "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.26.1",
     "eslint-plugin-react-hooks": "4.2.0",
-    "prettier": "2.3.2"
+    "gulp": "^3.9.1",
+    "gulp-append-prepend": "1.0.9",
+    "prettier": "2.4.1"
   }
 }
