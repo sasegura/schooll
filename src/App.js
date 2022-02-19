@@ -1,31 +1,64 @@
-import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+/**
+=========================================================
+* Material Kit 2 React - v2.0.0
+=========================================================
 
-import routes from "./routes";
-import withTracker from "./withTracker";
+* Product Page: https://www.creative-tim.com/product/material-kit-react
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
+Coded by www.creative-tim.com
 
-export default () => (
-  <Router basename={process.env.REACT_APP_BASENAME || ""}>
-    <div>
-      {routes.map((route, index) => {
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={withTracker(props => {
-              return (
-                <route.layout {...props}>
-                  <route.component {...props} />
-                </route.layout>
-              );
-            })}
-          />
-        );
-      })}
-    </div>
-  </Router>
-);
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
+import { useEffect } from "react";
+
+// react-router components
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+
+// @mui material components
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+// Material Kit 2 React themes
+import theme from "assets/theme";
+import Presentation from "layouts/pages/presentation";
+
+// Material Kit 2 React routes
+import routes from "routes";
+
+export default function App() {
+  const { pathname } = useLocation();
+
+  // Setting page scroll to 0 when changing the route
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+  }, [pathname]);
+
+  const getRoutes = (allRoutes) =>
+    allRoutes.map((route) => {
+      if (route.collapse) {
+        return getRoutes(route.collapse);
+      }
+
+      if (route.route) {
+        return <Route exact path={route.route} element={route.component} key={route.key} />;
+      }
+
+      return null;
+    });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Routes>
+        {getRoutes(routes)}
+        <Route path="/presentation" element={<Presentation />} />
+        <Route path="*" element={<Navigate to="/presentation" />} />
+      </Routes>
+    </ThemeProvider>
+  );
+}
