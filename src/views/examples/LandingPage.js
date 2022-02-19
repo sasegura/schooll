@@ -45,7 +45,7 @@ function LandingPage() {
                   According to the National Oceanic and Atmospheric
                   Administration, Ted, Scambos, NSIDClead scentist, puts the
                   potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and as late drop in ice extent
+                  to low ice esadxtent in the Pacific and as late drop in ice extent
                   in the Barents Sea.
                 </h5>
               </Col>
