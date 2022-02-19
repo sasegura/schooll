@@ -130,7 +130,7 @@ material-kit-2-react
     │   │   │    ├── landing-pages
     │   │   │    └── presentation
     │   │   ├── sections
-    │   │   │    ├── attention-catchers
+    │   │   │    ├── attention
     │   │   │    ├── components
     │   │   │    ├── elements
     │   │   │    ├── input-areas
