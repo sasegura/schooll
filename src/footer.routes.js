@@ -1,3 +1,4 @@
+import React from 'react';
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -20,19 +21,15 @@ export default {
   },
   socials: [
     {
-      icon: <FacebookIcon />,
       link: "https://www.facebook.com/CreativeTim/",
     },
     {
-      icon: <TwitterIcon />,
       link: "https://twitter.com/creativetim",
     },
     {
-      icon: <GitHubIcon />,
       link: "https://github.com/creativetimofficial",
     },
     {
-      icon: <YouTubeIcon />,
       link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
     },
   ],

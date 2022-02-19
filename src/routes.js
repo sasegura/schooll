@@ -35,7 +35,7 @@ Coded by www.creative-tim.com
           you can set the columns amount based on this key.
   10. The `rowsPerColumn` key is used to define that how many rows should be in a column.
 */
-
+import React from 'react';
 // @mui material components
 import Icon from "@mui/material/Icon";
 
