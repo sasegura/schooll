@@ -1,24 +1,29 @@
-name: Production build
+
+name: Node.js CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
-     - uses: actions/checkout@main
-      - run: npm install
-      - run: CI='' npm run build
-      - uses: jakejarvis/s3-sync-action@main
-        with:
-         args: --acl public-read --follow-symlinks --delete
-       env:
-         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-         AWS_REGION: "us-east-1"
-         SOURCE_DIR: "build"
-         REACT_APP_SECRET_PAYPAL: ${{ secrets.REACT_APP_SECRET_PAYPAL }}
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
