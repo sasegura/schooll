@@ -10,7 +10,7 @@ _Fully Coded Elements_
 Material Kit 2 React is built with over 40 frontend individual elements, like buttons, inputs, navbars, alerts or cards, giving you the freedom of choosing and combining. All components can take variations in color, which you can easily modify using MUI styled() API and sx prop. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
 
 This free MUI & React template is coming with pre-built design blocks, so the development process is seamless,
-switching from our pages to the real website is very easy to be done.
+switching from our pages to the rsdfeal website is very easy to be done.
 View all components here. (https://www.creative-tim.com/learning-lab/react/alerts/material-kit/)
 
 _Documentation built by Developers_
