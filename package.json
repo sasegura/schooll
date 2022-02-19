@@ -64,18 +64,12 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "gulp": "^4.0.2",
     "gulp-append-prepend": "1.0.9",
-<<<<<<< HEAD
-    "prettier": "2.4.1"
-  },
-  "optionalDependencies": {
-=======
-<<<<<<< HEAD
     "prettier": "2.4.1"
   },
   "optionalDependencies": {
     "fsevents": "2.1.2",
->>>>>>> 74319cff89f085e0cc23fac2287af8d8cc238f84
-    "typescript": "3.9.5"
+    "typescript": "3.9.5",
+    "prettier": "2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -98,17 +92,10 @@
       "not dead",
       "not op_mini all"
     ],
-<<<<<<< HEAD
-    "development": []
-=======
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-    "prettier": "2.3.2"
->>>>>>> 5937ff579992ccb859f7188ddd2212c36e85cdcb
->>>>>>> 74319cff89f085e0cc23fac2287af8d8cc238f84
   }
 }
