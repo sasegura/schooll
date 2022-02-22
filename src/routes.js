@@ -40,7 +40,7 @@ Coded by www.creative-tim.com
 import Icon from "@mui/material/Icon";
 
 // @mui icons
-import GitHubIcon from "@mui/icons-material/GitHub";
+import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
 
 // Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
@@ -67,6 +67,8 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+import English from "layouts/translation/english";
+import Spanish from "layouts/translation/spanish";
 
 const routes = [
   {
@@ -265,9 +267,20 @@ const routes = [
     ],
   },
   {
-    name: "github",
-    icon: <GitHubIcon />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
+    name: "Language",
+    icon: <TranslateOutlinedIcon/>,
+    collapse: [
+      {
+        name: "English",
+        route: "/translation/english",
+        component: <English />,
+      },
+      {
+        name: "Español",
+        route: "/translation/spanish",
+        component: <Spanish/>,
+      },
+    ],
   },
 ];
 
