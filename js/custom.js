@@ -4,7 +4,7 @@ $(document).ready(function () {
 	// Peloader
 	setTimeout(function(){
 		$('body').addClass('loaded');
-	}, 4000);
+	}, 1);
 	
     // ************Mean Menu
     jQuery('header .main-menu').meanmenu({
