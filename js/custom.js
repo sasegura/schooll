@@ -2,9 +2,9 @@ $(document).ready(function () {
     "use strict";
 
 	// Peloader
-	setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 1);
+	// setTimeout(function(){
+	// 	$('body').addClass('loaded');
+	// }, 1);
 	
     // ************Mean Menu
     jQuery('header .main-menu').meanmenu({
